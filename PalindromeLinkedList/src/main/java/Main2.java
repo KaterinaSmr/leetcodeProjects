@@ -20,12 +20,8 @@ public class Main2 {
         }
 
         fast = head;
-        System.out.println("head : " + head);
         slow = reverse(slow);
 
-        System.out.println("head : " + head);
-        System.out.println("slow : " + slow);
-        System.out.println("fast : " + fast);
         while (slow != null && fast !=null){
             if (fast.val != slow.val)
                 return false;
