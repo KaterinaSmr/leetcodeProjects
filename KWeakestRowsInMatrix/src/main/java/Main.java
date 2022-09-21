@@ -58,6 +58,10 @@ public class Main {
                 {0,0},
                 {1,0}
         };
-        return new int[][][]{mat1, mat2, mat3, mat4,mat5};
+        int[][] mat6 = new int[][]{
+                {0,0},{0,0},
+                {1,1},{1,1}
+        };
+        return new int[][][]{mat1, mat2, mat3, mat4,mat5, mat6};
     }
 }
