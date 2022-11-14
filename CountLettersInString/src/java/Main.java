@@ -1,6 +1,10 @@
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class Main {
     /* ЗАДАЧА:
@@ -14,7 +18,9 @@ AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBB
 */
     public static void main(String[] args) {
         String s="AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBB";
-        System.out.println(convert(s));
+//        System.out.println(convert(s));
+
+        convertWithStreams(s);
 
     }
 
@@ -38,5 +44,11 @@ AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBB
         }
         result += temp + (count > 1 ? String.valueOf(count) : "");
         return result;
+    }
+
+    public static String convertWithStreams(String s){
+       Map hm= Arrays.stream(s.split("")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+        System.out.println(hm.toString());
+        return hm.toString();
     }
 }

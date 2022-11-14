@@ -15,6 +15,7 @@
         <module>FizzBuzz</module>
         <module>MiddleOfLinkedList</module>
         <module>KWeakestRowsInMatrix</module>
+        <module>TaskFromInterview</module>
     </modules>
 
     <properties>
